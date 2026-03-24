@@ -1,0 +1,370 @@
+/* ─── Stock Page ─────────────────────────────────── */
+.stock-page {
+    padding: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.stock-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.stock-header h1 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--color-text-primary);
+}
+
+.stock-header p {
+    color: var(--color-text-secondary);
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+}
+
+/* Stats */
+.stock-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.stock-stat {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stock-stat:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stock-stat-num {
+    font-size: 1.75rem;
+    font-weight: 800;
+}
+
+.stock-stat-label {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    margin-top: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stock-stat-green .stock-stat-num {
+    color: var(--color-success);
+}
+
+.stock-stat-orange .stock-stat-num {
+    color: var(--color-warning);
+}
+
+.stock-stat-red .stock-stat-num {
+    color: var(--color-danger);
+}
+
+.stock-stat-blue .stock-stat-num {
+    color: #3b82f6;
+}
+
+.stock-stat-purple .stock-stat-num {
+    color: #8b5cf6;
+}
+
+/* Filters */
+.stock-filters {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.stock-filters .input {
+    max-width: 280px;
+}
+
+.stock-filters .select {
+    max-width: 200px;
+}
+
+/* Card */
+.stock-card {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+}
+
+/* Table */
+.stock-table-wrap {
+    overflow-x: auto;
+}
+
+.stock-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.stock-table th {
+    background: var(--color-bg-tertiary);
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-text-secondary);
+    border-bottom: 1px solid var(--color-border);
+    white-space: nowrap;
+}
+
+.stock-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: middle;
+}
+
+.stock-table tbody tr:hover {
+    background: var(--color-bg-tertiary);
+}
+
+.stock-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Stock badges */
+.stock-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.8125rem;
+}
+
+.stock-badge-green {
+    background: rgba(16, 185, 129, 0.12);
+    color: var(--color-success);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.stock-badge-orange {
+    background: rgba(245, 158, 11, 0.12);
+    color: var(--color-warning);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.stock-badge-red {
+    background: rgba(239, 68, 68, 0.12);
+    color: var(--color-danger);
+    border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+/* Progress bar */
+.stock-bar-wrap {
+    width: 100px;
+    height: 6px;
+    background: var(--color-bg-tertiary);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.stock-bar {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.3s;
+}
+
+.stock-bar-green {
+    background: var(--color-success);
+}
+
+.stock-bar-orange {
+    background: var(--color-warning);
+}
+
+.stock-bar-red {
+    background: var(--color-danger);
+}
+
+/* Status dot */
+.stock-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+}
+
+.stock-dot-green {
+    background: var(--color-success);
+}
+
+.stock-dot-orange {
+    background: var(--color-warning);
+}
+
+.stock-dot-red {
+    background: var(--color-danger);
+}
+
+/* Product name cell */
+.stock-product-name {
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.stock-product-sku {
+    font-size: 0.75rem;
+    color: var(--color-text-tertiary);
+    margin-top: 0.125rem;
+}
+
+.stock-product-cat {
+    font-size: 0.7rem;
+    padding: 0.125rem 0.5rem;
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: 9999px;
+    color: var(--color-text-secondary);
+    margin-left: 0.5rem;
+}
+
+/* Toggle */
+.stock-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    background: none;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    color: var(--color-text-primary);
+    font-weight: 700;
+    font-size: 1rem;
+    transition: background 0.15s;
+}
+
+.stock-toggle:hover {
+    background: var(--color-bg-tertiary);
+}
+
+/* Recent dispatch */
+.stock-dispatch-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.625rem 1rem;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.85rem;
+}
+
+.stock-dispatch-item:last-child {
+    border-bottom: none;
+}
+
+.stock-dispatch-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.stock-dispatch-qty {
+    font-weight: 700;
+    color: var(--color-danger);
+    min-width: 50px;
+}
+
+.stock-dispatch-product {
+    font-weight: 600;
+}
+
+.stock-dispatch-customer {
+    color: var(--color-text-secondary);
+    font-size: 0.8rem;
+}
+
+.stock-dispatch-date {
+    color: var(--color-text-tertiary);
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+/* Mobile cards */
+.stock-mobile-cards {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .stock-page {
+        padding: 1rem;
+    }
+
+    .stock-table-wrap.desktop-only {
+        display: none;
+    }
+
+    .stock-mobile-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+
+    .stock-mobile-card {
+        background: var(--color-bg-tertiary);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        padding: 1rem;
+    }
+
+    .stock-mobile-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 0.5rem;
+    }
+
+    .stock-mobile-card-name {
+        font-weight: 700;
+        font-size: 0.95rem;
+    }
+
+    .stock-mobile-card-details {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1rem;
+        font-size: 0.8rem;
+        color: var(--color-text-secondary);
+    }
+
+    .stock-mobile-card-details strong {
+        color: var(--color-text-primary);
+    }
+
+    .stock-filters .input {
+        max-width: 100%;
+        flex: 1;
+    }
+
+    .stock-filters .select {
+        max-width: 100%;
+        flex: 1;
+    }
+}

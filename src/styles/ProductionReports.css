@@ -1,0 +1,79 @@
+/* Page */
+.prod-report-page { max-width: 1400px; margin: 0 auto; padding-bottom: 3rem; }
+
+.prod-report-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.prod-report-header h1 { margin-bottom: 0.25rem; font-size: clamp(1.5rem, 4vw, 2rem); }
+.prod-report-header p { font-size: 0.9375rem; color: var(--color-text-secondary); }
+
+/* Controls */
+.prod-report-controls { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+
+.prod-report-tabs { display: flex; gap: 0.5rem; background: var(--color-bg-secondary); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 0.25rem; }
+.prod-tab { display: flex; align-items: center; gap: 0.5rem; padding: 0.625rem 1.25rem; border: none; background: transparent; color: var(--color-text-secondary); font-size: 0.9375rem; font-weight: 500; border-radius: var(--radius-md); cursor: pointer; transition: all var(--transition-fast); font-family: var(--font-primary); }
+.prod-tab:hover { background: var(--color-bg-hover); color: var(--color-text-primary); }
+.prod-tab-active { background: var(--color-accent-primary) !important; color: white !important; }
+
+.prod-report-year-select { display: flex; align-items: center; gap: 0.75rem; }
+.prod-report-year-select label { font-size: 0.9375rem; font-weight: 500; color: var(--color-text-secondary); }
+.prod-report-year-select .select { min-width: 120px; }
+
+/* Totals */
+.prod-report-totals { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+.prod-total-card { display: flex; align-items: center; gap: 1rem; padding: 1.25rem; background: var(--color-bg-secondary); border: 1px solid var(--color-border); border-radius: var(--radius-lg); }
+.prod-total-icon { width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-md); flex-shrink: 0; }
+.prod-total-green .prod-total-icon { background: rgba(16,185,129,0.15); color: var(--color-success); }
+.prod-total-blue .prod-total-icon { background: rgba(59,130,246,0.15); color: var(--color-info); }
+.prod-total-red .prod-total-icon { background: rgba(239,68,68,0.15); color: var(--color-danger); }
+.prod-total-purple .prod-total-icon { background: rgba(139,92,246,0.15); color: #8b5cf6; }
+.prod-total-num { font-size: 1.75rem; font-weight: 700; color: var(--color-text-primary); line-height: 1; }
+.prod-total-label { font-size: 0.8125rem; color: var(--color-text-secondary); margin-top: 0.375rem; }
+
+/* Card */
+.prod-report-card { background: var(--color-bg-secondary); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.5rem; }
+.prod-report-card h3 { font-size: 1.125rem; margin-bottom: 1.25rem; color: var(--color-text-primary); }
+
+/* Table */
+.prod-report-table-wrap { overflow-x: auto; border-radius: var(--radius-md); border: 1px solid var(--color-border); }
+.prod-report-table { width: 100%; border-collapse: collapse; }
+.prod-report-table thead { background: var(--color-bg-tertiary); }
+.prod-report-table th { padding: 0.875rem 1rem; text-align: left; font-weight: 600; color: var(--color-text-secondary); font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 2px solid var(--color-border); }
+.prod-report-table td { padding: 0.875rem 1rem; border-bottom: 1px solid var(--color-border); }
+.prod-report-table tbody tr:hover { background: var(--color-bg-hover); }
+
+.prod-badge { display: inline-block; padding: 0.375rem 0.75rem; border-radius: 9999px; font-weight: 700; font-size: 0.9375rem; }
+.prod-badge-green { background: rgba(16,185,129,0.15); color: var(--color-success); }
+.prod-badge-red { background: rgba(239,68,68,0.15); color: var(--color-danger); }
+
+/* Mobile */
+.prod-report-mobile { display: flex; flex-direction: column; gap: 1rem; }
+.prod-mobile-card { background: var(--color-bg-tertiary); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 1rem; }
+.prod-mobile-header { font-size: 1.125rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.875rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--color-border); }
+.prod-mobile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.875rem; }
+.prod-mobile-item { display: flex; flex-direction: column; gap: 0.25rem; }
+.prod-mobile-label { font-size: 0.75rem; color: var(--color-text-tertiary); text-transform: uppercase; letter-spacing: 0.03em; }
+.prod-mobile-value { font-size: 1.125rem; font-weight: 600; color: var(--color-text-primary); }
+.prod-green { color: var(--color-success) !important; }
+.prod-red { color: var(--color-danger) !important; }
+
+.desktop-only { display: block; }
+.mobile-only { display: none; }
+
+@media (max-width: 768px) {
+  .desktop-only { display: none !important; }
+  .mobile-only { display: block !important; }
+  .prod-report-totals { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .prod-total-card { padding: 1rem; }
+  .prod-total-icon { width: 40px; height: 40px; }
+  .prod-total-num { font-size: 1.5rem; }
+  .prod-report-controls { flex-direction: column; align-items: stretch; }
+  .prod-report-tabs { width: 100%; }
+  .prod-tab { flex: 1; justify-content: center; padding: 0.75rem 0.5rem; }
+  .prod-report-year-select { justify-content: center; }
+  .prod-report-header { flex-direction: column; }
+  .prod-report-header .btn { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .prod-report-totals { grid-template-columns: 1fr; }
+  .prod-mobile-grid { grid-template-columns: 1fr; }
+}

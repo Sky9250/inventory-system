@@ -1,0 +1,243 @@
+.settings-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.settings-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.settings-header h1 {
+  margin-bottom: var(--spacing-xs);
+}
+
+.settings-tip {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: rgba(0, 217, 255, 0.08);
+  border: 1px solid rgba(0, 217, 255, 0.25);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  font-size: 0.9375rem;
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.6;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+/* Manage Card */
+.manage-card {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.manage-card-header {
+  padding: var(--spacing-lg);
+  border-left: 4px solid transparent;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-tertiary);
+}
+
+.manage-card-title {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xs);
+}
+
+.manage-card-title h3 {
+  font-size: 1.125rem;
+  color: var(--color-text-primary);
+}
+
+.manage-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 26px;
+  height: 26px;
+  padding: 0 0.5rem;
+  background: var(--color-bg-hover);
+  border: 1px solid var(--color-border);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.manage-subtitle {
+  font-size: 0.8125rem;
+  color: var(--color-text-tertiary);
+  margin-left: 2.25rem;
+}
+
+/* Add Row */
+.manage-add-row {
+  display: flex;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.manage-add-row .input {
+  flex: 1;
+}
+
+.manage-error {
+  margin: -0.5rem var(--spacing-lg) var(--spacing-md);
+  font-size: 0.8125rem;
+  color: var(--color-danger);
+}
+
+/* List */
+.manage-list {
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+.manage-empty {
+  padding: var(--spacing-xl);
+  text-align: center;
+  color: var(--color-text-tertiary);
+  font-size: 0.875rem;
+}
+
+/* Item */
+.manage-item {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.manage-item-view {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: 0.75rem var(--spacing-md);
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.manage-item-view:hover {
+  border-color: var(--color-border-light);
+  background: var(--color-bg-hover);
+}
+
+.manage-item-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.manage-item-name {
+  flex: 1;
+  font-size: 0.9375rem;
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.manage-item-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.manage-item-view:hover .manage-item-actions {
+  opacity: 1;
+}
+
+/* Edit Mode */
+.manage-item-edit {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: 0.5rem;
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-accent-primary);
+  border-radius: var(--radius-md);
+}
+
+.manage-item-edit .input {
+  flex: 1;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.9375rem;
+}
+
+/* Icon Buttons */
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.btn-icon-edit {
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--color-info);
+}
+
+.btn-icon-edit:hover {
+  background: rgba(59, 130, 246, 0.3);
+}
+
+.btn-icon-delete {
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--color-danger);
+}
+
+.btn-icon-delete:hover {
+  background: rgba(239, 68, 68, 0.3);
+}
+
+.btn-icon-success {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--color-success);
+}
+
+.btn-icon-success:hover {
+  background: rgba(16, 185, 129, 0.3);
+}
+
+.btn-icon-cancel {
+  background: rgba(107, 114, 128, 0.15);
+  color: var(--color-text-secondary);
+}
+
+.btn-icon-cancel:hover {
+  background: rgba(107, 114, 128, 0.3);
+}
+
+@media (max-width: 900px) {
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .manage-add-row {
+    flex-direction: column;
+  }
+
+  .manage-add-row .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
